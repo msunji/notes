@@ -1,0 +1,21 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directories
+node_modules/
+
+# dotenv environment variable files
+.env*
+
+# gatsby files
+./web/.cache/
+.cache/
+public
+
+# Mac files
+.DS_Store
