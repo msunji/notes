@@ -9,17 +9,31 @@ export default {
             type: 'string',
         },
         {
+            title: 'Date',
+            name: 'date',
+            type: 'datetime',
+        },
+        {
             title: 'Slug',
             name: 'slug',
             type: 'slug',
             options: {
-                source: 'title'
+                source: 'title',
+                auto: true
             }
+        },
+        {
+            title: 'Description',
+            name: 'description',
+            type: 'text',
         },
         {
             title: 'Content',
             name: 'content',
-            type: 'text',
+            type: 'array',
+            of: [
+                { type: 'block' }
+            ]
         }
     ]
 }
