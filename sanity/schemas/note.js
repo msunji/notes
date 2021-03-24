@@ -15,6 +15,11 @@ export default {
             options: {
                 source: 'title'
             }
+        },
+        {
+            title: 'Content',
+            name: 'content',
+            type: 'text',
         }
     ]
 }
