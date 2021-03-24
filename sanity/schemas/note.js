@@ -11,7 +11,10 @@ export default {
         {
             title: 'Slug',
             name: 'slug',
-            type: 'slug'
+            type: 'slug',
+            options: {
+                source: 'title'
+            }
         }
     ]
 }
