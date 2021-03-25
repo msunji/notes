@@ -8,6 +8,7 @@ module.exports = {
       options: {
         projectId: "dq3ola7q",
         dataset: "production",
+        graphqlTag: "default",
       },
     },
     "gatsby-plugin-styled-components",

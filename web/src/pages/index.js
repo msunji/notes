@@ -4,8 +4,10 @@ import { graphql } from "gatsby";
 // markup
 const IndexPage = ({ data }) => {
   const notes = data.allSanityNote.nodes.map((note) => (
-    <div>
+    <div key={note.id}>
       <h2>{note.title}</h2>
+      <p>{note._updatedAt}</p>
+      <p>{note.excerpt}</p>
     </div>
   ));
 
@@ -25,6 +27,8 @@ export const pageQuery = graphql`
       nodes {
         title
         id
+        excerpt
+        _updatedAt(formatString: "MMMM DD, YYYY")
       }
     }
   }

@@ -19,12 +19,11 @@ export default {
             type: 'slug',
             options: {
                 source: 'title',
-                auto: true
             }
         },
         {
-            title: 'Description',
-            name: 'description',
+            title: 'Excerpt',
+            name: 'excerpt',
             type: 'text',
         },
         {
@@ -32,7 +31,8 @@ export default {
             name: 'content',
             type: 'array',
             of: [
-                { type: 'block' }
+                { type: 'block' },
+                { type: 'image' }
             ]
         }
     ]
