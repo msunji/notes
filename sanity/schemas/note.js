@@ -31,8 +31,7 @@ export default {
             name: 'content',
             type: 'array',
             of: [
-                { type: 'block' },
-                { type: 'image' }
+                { type: 'block' }
             ]
         }
     ]
