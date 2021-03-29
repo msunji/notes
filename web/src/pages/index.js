@@ -1,5 +1,7 @@
 import * as React from "react";
-import { graphql } from "gatsby";
+import GlobalStyle from "../style/GlobalStyle";
+import Layout from "../components/layout";
+import { graphql, Link } from "gatsby";
 
 // markup
 const IndexPage = ({ data }) => {
@@ -12,10 +14,13 @@ const IndexPage = ({ data }) => {
   ));
 
   return (
-    <div>
-      <h1>Here's a list of notes</h1>
-      {notes}
-    </div>
+    <>
+      <GlobalStyle />
+      <Layout>
+        <h1>Here's a list of notes</h1>
+        {notes}
+      </Layout>
+    </>
   );
 };
 
