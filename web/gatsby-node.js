@@ -7,9 +7,11 @@ const createNotePage = async (graphql, actions, reporter) => {
       allSanityNote {
         nodes {
           id
+          title
           slug {
             current
           }
+          _rawContent
         }
       }
     }
@@ -28,7 +30,10 @@ const createNotePage = async (graphql, actions, reporter) => {
     createPage({
       path,
       component: noteTemplate,
-      context: { id: node.id },
+      context: {
+        id: node.id,
+        title: node.title,
+      },
     });
   });
 };
