@@ -11,7 +11,13 @@ const createNotePage = async (graphql, actions, reporter) => {
           slug {
             current
           }
-          _rawContent
+          content {
+            _key
+            _type
+            style
+            list
+            _rawChildren
+          }
         }
       }
     }
@@ -33,6 +39,7 @@ const createNotePage = async (graphql, actions, reporter) => {
       context: {
         id: node.id,
         title: node.title,
+        content: node.content,
       },
     });
   });
