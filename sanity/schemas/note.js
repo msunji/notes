@@ -22,6 +22,15 @@ export default {
             }
         },
         {
+            title: 'Categories',
+            name: 'Categories',
+            type: 'array',
+             of: [{ type: 'string'}],
+             options: {
+                 layout: 'tags',
+             }
+        },
+        {
             title: 'Excerpt',
             name: 'excerpt',
             type: 'text',
